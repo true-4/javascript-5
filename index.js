@@ -52,52 +52,52 @@ function sum3(a, b) {
 sum3(4, 4)
 
 // Function Expression
-const sayHi = function(name) {
+const sayHi = function say(name) {
   console.log('Привет ' + name)
 }
 sayHi('Елизовета')
 
-const sumNum = function(a, b) {
+const sumNum = function sum(a, b) {
   console.log(a + b)
 }
 sumNum(4, 4)
 
-const sayHi1 = function(name, surname) {
+const sayHi1 = function say1(name, surname) {
   console.log(`Здравствуйте ${surname} ${name}!`)
 }
 sayHi1('Екатерина', 'Петрова')
 
-const sayHi2 = function(name) {
+const sayHi2 = function say2(name) {
   console.log(name)
 }
 sayHi2('Денис')
 
-const sayHi3 = function(name) {
+const sayHi3 = function say(name) {
   console.log(name)
 }
 sayHi3('Лёха')
 
-const sumNum1 = function(a, b) {
+const sumNum1 = function sum1(a, b) {
   console.log(a + b)
 }
 sumNum1(13, 3)
 
-const sumNum2 = function(a, b, c) {
+const sumNum2 = function sum2(a, b, c) {
   console.log(a - b * c)
 }
 sumNum2(30, 5, 5)
 
-const sayHi4 = function(name) {
+const sayHi4 = function say4(name) {
   console.log(name)
 }
 sayHi('Кирилл')
 
-const sumNum3 = function(a, b) {
+const sumNum3 = function sum3(a, b) {
   console.log(a - b)
 }
 sumNum3(60, 14)
 
-const sumNum4 = function(a, b) {
+const sumNum4 = function sum4(a, b) {
   console.log(a / b)
 }
 sumNum4(49, 7)
@@ -132,3 +132,5 @@ sumArr3(2, 5)
 
 const sumArr4 = (a) => console.log(a ** 2)
 sumArr4(5)
+
+// Анонимная функция (внутри setTimeout, forEach, map, и т.п.)
