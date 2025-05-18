@@ -101,3 +101,34 @@ const sumNum4 = function(a, b) {
   console.log(a / b)
 }
 sumNum4(49, 7)
+
+// Arrow Function
+const sumArr = (a, b) => a + b
+console.log(sumArr(7, 7))
+
+const seyArr = (name) => console.log(`Привет ${name}!`)
+seyArr('Яна')
+
+const sayArr1 = (name) => console.log('Привет ' + name)
+sayArr1('Алина')
+
+const sayArr2 = (name, surname) => console.log(`Здравствуйте ${surname} ${name}!`)
+sayArr2('Каролина', 'Ким')
+
+const sayArr3 = (name) => console.log(`Доброе утро ${name}!`)
+sayArr3('Илья')
+
+const sayArr4 = (name) => console.log('Привет ' + name + '!')
+sayArr4('Сергей')
+
+const sumArr1 = (a, b) => console.log(a - b)
+sumArr1(9, 3)
+
+const sumArr2 = (a, b) => console.log(a % b)
+sumArr2(10, 4)
+
+const sumArr3 = (a, b) => console.log(a * b)
+sumArr3(2, 5)
+
+const sumArr4 = (a) => console.log(a ** 2)
+sumArr4(5)
