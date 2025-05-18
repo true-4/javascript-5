@@ -50,3 +50,54 @@ function sum3(a, b) {
   console.log(a ** 2 + b)
 }
 sum3(4, 4)
+
+// Function Expression
+const sayHi = function(name) {
+  console.log('Привет ' + name)
+}
+sayHi('Елизовета')
+
+const sumNum = function(a, b) {
+  console.log(a + b)
+}
+sumNum(4, 4)
+
+const sayHi1 = function(name, surname) {
+  console.log(`Здравствуйте ${surname} ${name}!`)
+}
+sayHi1('Екатерина', 'Петрова')
+
+const sayHi2 = function(name) {
+  console.log(name)
+}
+sayHi2('Денис')
+
+const sayHi3 = function(name) {
+  console.log(name)
+}
+sayHi3('Лёха')
+
+const sumNum1 = function(a, b) {
+  console.log(a + b)
+}
+sumNum1(13, 3)
+
+const sumNum2 = function(a, b, c) {
+  console.log(a - b * c)
+}
+sumNum2(30, 5, 5)
+
+const sayHi4 = function(name) {
+  console.log(name)
+}
+sayHi('Кирилл')
+
+const sumNum3 = function(a, b) {
+  console.log(a - b)
+}
+sumNum3(60, 14)
+
+const sumNum4 = function(a, b) {
+  console.log(a / b)
+}
+sumNum4(49, 7)
