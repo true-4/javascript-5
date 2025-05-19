@@ -222,3 +222,9 @@ console.log(greet('Ольга'))
 
 const greet1 = (name) => {return `Здравствуйте ${name}!`}
 console.log(greet1('Олег'))
+
+// Немедленно вызываемая функция (IIFE)
+(function top() {
+  const text = 'Немедленно вызываемая функция (IIFE)'
+  console.log(text)
+})()
