@@ -220,11 +220,47 @@ const greet = function(name) {
 }
 console.log(greet('Ольга'))
 
-const greet1 = (name) => {return `Здравствуйте ${name}!`}
-console.log(greet1('Олег'))
+const greet1 = (name) => {return `Здравствуйте ${name}!`};
+console.log(greet1('Олег'));
 
 // Немедленно вызываемая функция (IIFE)
-(function top() {
+(function() {
   const text = 'Немедленно вызываемая функция (IIFE)'
   console.log(text)
-})()
+})();
+
+(function(name) {
+  console.log(`Привет ${name}!`)
+})('Оксана');
+
+(() => {
+  console.log('IIFE функция')
+})();
+
+((name) => {
+  console.log('Доброе утро ' + name + '!')
+})('Евстигней');
+
+(function(a, b) {
+  console.log(a + b)
+})(8, 3);
+
+((a, b) => {
+  console.log(a - b)
+})(11, 6);
+
+(function(name, surname) {
+  return 'Здравствуйте ' + name + ' ' + surname + '!'
+})(console.log('Егор', 'Мэтура'));
+
+((a, b) => {
+  console.log(a / b)
+})(4999, 20);
+
+(function(brand) {
+  console.log(brand)
+})('BMW');
+
+((brand, modal) => {
+  console.log(`Вы выбрали ${brand} ${modal}`)
+})('BMW', 'M3');
