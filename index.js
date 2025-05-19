@@ -1,5 +1,6 @@
 'use strict'
 
+// 1
 // Function Declaration
 function sey(name) {
   return 'Hello ' + name
@@ -264,3 +265,61 @@ console.log(greet1('Олег'));
 ((brand, modal) => {
   console.log(`Вы выбрали ${brand} ${modal}`)
 })('BMW', 'M3');
+
+// 2
+// 2.1
+const hello = (name) => {console.log(`Привет ${name}!`)}
+hello('Евгений')
+
+// 2.2
+function sumNumber(a, b) {
+  return a + b
+}
+console.log(sumNumber(11.3, 22))
+
+// 2.3
+function discountParity(n) {
+  return n % 2 == 0
+}
+console.log(discountParity(8))
+
+// 2.4
+const arr = [2, 3, 4]
+const arrNew = arr.map(n => n ** 2) 
+console.log(arrNew)
+
+// 2.5
+function str (n) {
+  return n.toUpperCase()
+}
+console.log(str('hello'))
+
+// 2.6
+const arrArr = [1, 3, 4, 8]
+const arrFunc = (n) => { return arrArr.includes(n) }
+console.log(arrFunc(2))
+
+// 2.7
+function table(n) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(i * n)
+  }
+}
+table(3)
+
+// 2.8
+function isPol(str) {
+  const normalizedStr = str.toLowerCase() // Приводим к нижнему регистру
+  const cleanedStr = normalizedStr.replace(/[^a-z0-9]/g, '') // Удаляем все ненужные символы
+  const reversedStr = cleanedStr.split('').reverse().join('') // Разворачиваем строку
+  return cleanedStr === reversedStr
+}
+console.log(isPol('abcba'))
+
+// 2.9
+setTimeout(function() {
+  console.log('Анонимная функция внутри setTimeout, которая выводит сообщение через 2 секунды')
+}, 2000);
+
+// 2.10
+((text) => { console.log(text)})('Скрипт запущен');
