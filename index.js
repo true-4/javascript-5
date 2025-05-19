@@ -134,3 +134,91 @@ const sumArr4 = (a) => console.log(a ** 2)
 sumArr4(5)
 
 // Анонимная функция (внутри setTimeout, forEach, map, и т.п.)
+setTimeout(function() {
+  console.log('Через 5 сек');
+}, 5000)
+
+setTimeout(function() {
+  console.log('Через 4 сек')
+}, 4000)
+
+setTimeout(function() {
+  console.log('Через 3 сек')
+}, 3000)
+
+setTimeout(function() {
+  console.log('Через 2 сек')
+}, 2000)
+
+setTimeout(function() {
+  console.log('Через 1 сек')
+}, 1000)
+
+const array = [1, 2, 3];
+array.forEach(function(item) {
+  console.log('Число: ' + item)
+})
+
+const array1 = [3, 2, 1]
+array1.forEach(function(item) {
+  console.log(item)
+})
+
+const array2 = ['top', 'right', 'bottom', 'left']
+array2.forEach(function(item) {
+  console.log(item)
+})
+
+const array3 = [30, 46, 60]
+array3.forEach(function(item) {
+  console.log(item)
+})
+
+const array4 = ['M3', 'M5', 'M8']
+array4.forEach(function(item) {
+  console.log(item)
+})
+
+const num = [2, 3, 4]
+const square = num.map(function(n) {
+  return n * n
+})
+console.log(square)
+
+const num1 = [3, 9]
+const square1 = num1.map(n => n * n) 
+console.log(square1)
+
+const name = ['Игорь', 'Слава']
+const users = name.map(function(name) {
+  return name
+})
+console.log(name)
+
+const user1 = name.map(name => name)
+console.log(user1)
+
+const stickersNum = [9919, 1999, 9199, 9991]
+const stickers = stickersNum.map(function(sticker) {
+  return '№ Стикера: ' + sticker
+})
+console.log(stickers)
+
+const stickers1 = stickersNum.map(sticker => sticker)
+console.log(stickers1)
+
+const sumIn = function(a, b) {
+  return a + b
+}
+console.log(sumIn(4, 8))
+
+const sumIn1 = (a, b) => {return a * b}
+console.log(sumIn1(4, 11))
+
+const greet = function(name) {
+  return 'Приветствую ' + name + '!'
+}
+console.log(greet('Ольга'))
+
+const greet1 = (name) => {return `Здравствуйте ${name}!`}
+console.log(greet1('Олег'))
