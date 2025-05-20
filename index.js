@@ -323,3 +323,93 @@ setTimeout(function() {
 
 // 2.10
 ((text) => { console.log(text)})('Скрипт запущен');
+
+// 4
+// 4.1
+function sayHello() {
+  return 'Hello '
+}
+
+function userHello(name) {
+  const say = sayHello()
+  return say + name
+}
+console.log(userHello('Vlad'))
+
+// 4.2
+function valueDdefault(name = 'Jec', age = 27) {
+  return `Меня зовут ${name}, мне ${age}!`
+}
+console.log(valueDdefault())
+
+// 4.3
+function block(name) {
+  function inner() {
+    return name
+  }
+  return inner
+}
+console.log(block('Egor')())
+
+// 4.4
+function factorial(n) {
+  if(n === 1) return 1
+  return n * factorial(n - 1)
+}
+console.log(factorial(4))
+
+// 4.5
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      return function (d) {
+        return a + b + c + d
+      }
+    }
+  }
+}
+console.log(sum(1)(2)(3)(4))
+
+// 4.6
+function average(...numbers) {
+  const sum = numbers.reduce((n, num) => n + num, 0);
+  return sum / numbers.length;
+}
+console.log(average(4, 8, 9))
+
+// 4.7
+function counter() {
+  let count = 0
+  function strainer() {
+    count++
+    return count
+  }
+  return strainer
+}
+const muCounter = counter()
+console.log(muCounter())
+console.log(muCounter())
+console.log(muCounter())
+
+// 4.8
+function argSum() {
+  const args = Array.from(arguments)
+  return args.reduce((n, num) => n + num, 0);
+}
+console.log(argSum(1, 2, 3, 4, 5, 6, 7))
+console.log(argSum(3, 5, 7))
+console.log(argSum(1, 3, 4, 7))
+
+// 4.9
+const arrOrig = ['hi', 'hello', 'ola']
+const arrClone = arrOrig.map(el => el)
+console.log(arrClone)
+
+// 4.10
+function delayLog(callback, delay) {
+  setTimeout(callback, delay);
+}
+
+delayLog(function() {
+  console.log('Привет через 2 секунды');
+}, 2000);
