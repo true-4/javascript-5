@@ -413,3 +413,74 @@ function delayLog(callback, delay) {
 delayLog(function() {
   console.log('Привет через 2 секунды');
 }, 2000);
+
+// 5
+// 5.1
+// function sayHi11() { // объявляем function declaration 
+//   console.log("Hi!"); // выводит в консоль Hi! РЕЗУЛЬТАТ Hi!
+// }
+// const result = sayHi11(); // объявляем переменную и присваиваем ей функцию
+// console.log(result); // выводим переменную которая вызывает функцию. РЕЗУЛЬТАТ undefined
+
+
+// 5.2
+// function getUser(name = "Гость") { // объявляем function declaration с параметрами и его значением по умолчанию(при вызове функции можно передать имя и оно заменит его)
+//   return "Привет, " + name; // возвращаем строку Привет сложенную с параметром. РЕЗУЛЬТАТ Привет, Гость
+// }
+
+// 5.3
+// const f = function () { // объявление Function Expression анонимная версия
+//   return "Hello"; // возвращает hello
+// };
+// console.log(f()); // выводим функцию в сонсоль и вызываем её. Выведет Hello
+
+// 5.4
+// const multiply = (a, b) => a * b; // объявляем стрелочную функцию с параметрами и использовали их
+// console.log(multiply(3, 4)); // выводим в консоль функцию и вызываем её передавая парамтры. Выведет 12
+
+// 5.5
+// (function () { // объявление IIFE немедленный вызов
+//   console.log("IIFE работает");  // вывод в консоль IIFE работает
+// })(); // вызов функции. РЕЗУЛЬТАТ IIFE работает
+
+
+// 6
+// 6.1
+function power(n, exp) {
+  return n ** exp
+}
+console.log(power(5, 2))
+
+// 6.2
+function max(a, b, c)  {
+  return Math.max(a, b, c)
+}
+console.log(max(2, 9, 4))
+
+// 6.3
+const arrayNum = [1, 2, 3, 4, 5]
+function sortArr() {
+  return arrayNum.sort((a, b) => b - a)
+}
+console.log(sortArr())
+
+// 6.4
+const strOrig = 'далВ'
+function strRev() {
+  return strOrig.split('').reverse().join('')
+}
+console.log(strRev())
+
+// 6.5
+function isPrime(num) {
+  if (num <= 1) return false
+  if (num === 2) return true
+  if (num % 2 === 0) return false
+  for (let i = 3; i <= Math.sqrt(num); i += 2) {
+    if (num % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+console.log(isPrime(89))
